@@ -1,5 +1,8 @@
 package com.example._2factorymethodtarea_reporte;
 
+import com.example._2factorymethodtarea_reporte.factory.InventoryReportFactory;
+import com.example._2factorymethodtarea_reporte.factory.ReportFactory;
+import com.example._2factorymethodtarea_reporte.factory.SalesReportFactory;
 import com.example._2factorymethodtarea_reporte.model.ReportType;
 import com.example._2factorymethodtarea_reporte.product.InventoryReport;
 import com.example._2factorymethodtarea_reporte.product.Report;
@@ -32,13 +35,13 @@ public class Application {
 
             ReportType type = tryParseReportType(input);
 
-            Report report = switch (type) {
-                case INVENTORY -> new InventoryReport();
-                case SALES -> new SalesReport();
+            ReportFactory report = switch (type) {
+                case INVENTORY -> new InventoryReportFactory();
+                case SALES -> new SalesReportFactory();
 
             };
             log.info("Cliente ordenó: {}", type);
-            report.generate();
+            report.generateReport();
 
         };
     }

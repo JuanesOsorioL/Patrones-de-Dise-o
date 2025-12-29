@@ -39,7 +39,6 @@ public class Application {
             };
             log.info("Cliente ordenó: {}", type);
             restaurant.orderHamburger();
-
         };
     }
 
