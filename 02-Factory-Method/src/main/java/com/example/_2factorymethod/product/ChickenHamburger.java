@@ -3,8 +3,8 @@ package com.example._2factorymethod.product;
 import java.util.logging.Logger;
 
 
-public class ChickenHamburguer implements Hamburguer {
-    Logger logger = Logger.getLogger(ChickenHamburguer.class.getName());
+public class ChickenHamburger implements Hamburger {
+    Logger logger = Logger.getLogger(ChickenHamburger.class.getName());
 
     @Override
     public void prepare() {

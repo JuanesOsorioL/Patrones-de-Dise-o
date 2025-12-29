@@ -1,11 +1,11 @@
 package com.example._2factorymethod.factory;
 
-import com.example._2factorymethod.product.BeanHamburguer;
-import com.example._2factorymethod.product.Hamburguer;
+import com.example._2factorymethod.product.BeanHamburger;
+import com.example._2factorymethod.product.Hamburger;
 
 public class BeanRestaurant extends Restaurant {
     @Override
-    Hamburguer createHamburguer() {
-        return new BeanHamburguer();
+    Hamburger createHamburger() {
+        return new BeanHamburger();
     }
 }

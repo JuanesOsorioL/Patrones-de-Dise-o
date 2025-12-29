@@ -1,5 +1,5 @@
 package com.example._2factorymethod.product;
 
-public interface Hamburguer {
+public interface Hamburger {
    void prepare();
 }

@@ -5,19 +5,17 @@ import com.example._2factorymethod.factory.BeefRestaurant;
 import com.example._2factorymethod.factory.ChickenRestaurant;
 import com.example._2factorymethod.factory.Restaurant;
 import com.example._2factorymethod.model.BurgerType;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Scanner;
-import java.util.logging.Logger;
 
 @SpringBootApplication
+@Slf4j
 public class Application {
-
-    Logger logger = Logger.getLogger(Application.class.getName());
-
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -29,27 +27,31 @@ public class Application {
 
         return args -> {
 
-
-            logger.info("Tipo de hamburguesa (beef/chicken/bean): ");
+            log.info("Tipo de hamburguesa (beef/chicken/bean): ");
             String input = sc.nextLine().trim().toUpperCase();
 
-            BurgerType type;
-            try {
-                type = BurgerType.valueOf(input);
-            } catch (IllegalArgumentException e) {
-                logger.info("Tipo inválido, se usará BEEF por defecto.");
-                type = BurgerType.BEEF;
-            }
+            BurgerType type = tryParseBurgerType(input);
 
             Restaurant restaurant = switch (type) {
                 case BEEF -> new BeefRestaurant();
                 case CHICKEN -> new ChickenRestaurant();
                 case BEAN -> new BeanRestaurant();
-                default -> throw new IllegalStateException("Tipo no soportado: " + type);
             };
-
+            log.info("Cliente ordenó: {}", type);
             restaurant.orderHamburger();
 
         };
     }
+
+
+    private BurgerType tryParseBurgerType(String input) {
+        try {
+            return BurgerType.valueOf(input);
+        } catch (IllegalArgumentException e) {
+            log.warn("Tipo inválido '{}', usando BEEF", input);
+            return BurgerType.BEEF;
+        }
+    }
+
+
 }

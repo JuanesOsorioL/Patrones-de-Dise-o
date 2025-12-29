@@ -1,12 +1,12 @@
 package com.example._2factorymethod.factory;
 
-import com.example._2factorymethod.product.Hamburguer;
+import com.example._2factorymethod.product.Hamburger;
 
 public abstract class Restaurant {
-    abstract Hamburguer createHamburguer();
+    abstract Hamburger createHamburger();
 
     public void orderHamburger() {
-        Hamburguer hamburguer = this.createHamburguer();
-        hamburguer.prepare();
+        Hamburger hamburger = this.createHamburger();
+        hamburger.prepare();
     }
 }

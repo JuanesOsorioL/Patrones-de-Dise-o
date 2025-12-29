@@ -2,9 +2,9 @@ package com.example._2factorymethod.product;
 
 import java.util.logging.Logger;
 
-public class BeefHamburguer implements Hamburguer {
+public class BeefHamburger implements Hamburger {
 
-    Logger logger = Logger.getLogger(BeefHamburguer.class.getName());
+    Logger logger = Logger.getLogger(BeefHamburger.class.getName());
 
     @Override
     public void prepare() {
