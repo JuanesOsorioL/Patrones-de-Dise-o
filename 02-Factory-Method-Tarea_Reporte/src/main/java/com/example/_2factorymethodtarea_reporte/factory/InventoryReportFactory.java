@@ -5,7 +5,7 @@ import com.example._2factorymethodtarea_reporte.product.Report;
 
 public class InventoryReportFactory extends ReportFactory {
     @Override
-    Report createReport() {
+    protected  Report createReport() {
         return new InventoryReport();
     }
 }

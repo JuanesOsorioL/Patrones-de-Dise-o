@@ -6,7 +6,7 @@ import com.example._2factorymethod.product.Hamburger;
 
 public class ChickenRestaurant extends Restaurant {
     @Override
-    Hamburger createHamburger() {
+    protected Hamburger createHamburger() {
         return new ChickenHamburger();
     }
 }
