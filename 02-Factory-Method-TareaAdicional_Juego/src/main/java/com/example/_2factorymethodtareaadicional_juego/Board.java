@@ -1,26 +1,25 @@
 package com.example._2factorymethodtareaadicional_juego;
 
+import lombok.Getter;
+
 //creador
 public abstract class Board {
 
     private Game game;
-    private String[] player;
+    @Getter
+    private String[] players;
 
 
-    public Board(String[] player) {
-        this.player = player;
+    protected Board(String[] players) {
+        this.players = players;
     }
 
-    // Metodo fabrica - el encargado de construir los objectos
-    abstract Game createGame();
+    // Método fabrica - el encargado de construir los objectos
+    protected abstract Game createGame();
 
-    // Metodo plantilla
+    // Método plantilla
     public void initialize() {
         game = createGame();
         game.start();
-    }
-
-    public String[] getPlayer() {
-        return player;
     }
 }

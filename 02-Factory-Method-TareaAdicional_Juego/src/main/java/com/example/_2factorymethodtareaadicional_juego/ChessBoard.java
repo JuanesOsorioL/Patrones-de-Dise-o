@@ -1,25 +1,21 @@
 package com.example._2factorymethodtareaadicional_juego;
 
+//creador concreto
 public class ChessBoard extends Board {
 
-    public ChessBoard(String[] player) {
-        super(player);
+    public ChessBoard(String[] players) {
+        super(players);
     }
 
     @Override
-    Game createGame() {
+    protected Game createGame() {
 
-        String[] player = getPlayer();
+        String[] players = getPlayers();
 
-        String playerOne = "Blanco";
-        String playerTwo = "Negro";
+        String playerOne = players != null && players.length > 0 && players[0] != null && !players[0].isBlank() ? players[0] : "Blanco";
+        String playerTwo = players != null && players.length > 1 && players[1] != null && !players[1].isBlank() ? players[1] : "Negro";
 
-        if (player[0].equals(playerOne) && player[1].equals(playerTwo)) {
-
-        }
-
-
-        return new ChessGame(playerOne,playerTwo);
+        return new ChessGame(playerOne, playerTwo);
 
     }
 }

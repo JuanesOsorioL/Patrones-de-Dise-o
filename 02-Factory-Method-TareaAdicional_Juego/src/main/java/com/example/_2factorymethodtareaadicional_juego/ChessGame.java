@@ -16,6 +16,6 @@ public class ChessGame implements Game {
 
     @Override
     public void start() {
-        log.info("Iniciando juego de ajedrez");
+        log.info("Iniciando game {} vs {}", playerOne, playerTwo);
     }
 }

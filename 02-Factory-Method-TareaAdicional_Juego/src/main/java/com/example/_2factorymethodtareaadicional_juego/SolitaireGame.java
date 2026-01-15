@@ -14,6 +14,6 @@ public class SolitaireGame implements Game {
 
     @Override
     public void start() {
-        log.info("Iniciando juego de solitario");
+        log.info("Iniciando juego de solitario jugador {}",player);
     }
 }
