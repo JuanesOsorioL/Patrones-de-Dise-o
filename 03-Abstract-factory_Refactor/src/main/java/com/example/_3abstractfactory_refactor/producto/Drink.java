@@ -1,4 +1,4 @@
-package com.example._3abstractfactory.producto;
+package com.example._3abstractfactory_refactor.producto;
 
 public interface Drink {
     void pour();

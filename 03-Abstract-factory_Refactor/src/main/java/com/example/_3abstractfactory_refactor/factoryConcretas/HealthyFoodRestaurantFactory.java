@@ -1,10 +1,11 @@
-package com.example._3abstractfactory.factoryConcretas;
+package com.example._3abstractfactory_refactor.factoryConcretas;
 
-import com.example._3abstractfactory.factory.RestaurantFactory;
-import com.example._3abstractfactory.producto.Drink;
-import com.example._3abstractfactory.producto.Hamburger;
-import com.example._3abstractfactory.productoConcreto.ChickenHamburger;
-import com.example._3abstractfactory.productoConcreto.Water;
+
+import com.example._3abstractfactory_refactor.factory.RestaurantFactory;
+import com.example._3abstractfactory_refactor.producto.Drink;
+import com.example._3abstractfactory_refactor.producto.Hamburger;
+import com.example._3abstractfactory_refactor.productoConcreto.ChickenHamburger;
+import com.example._3abstractfactory_refactor.productoConcreto.Water;
 
 public class HealthyFoodRestaurantFactory implements RestaurantFactory {
     @Override
