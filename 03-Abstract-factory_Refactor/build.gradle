@@ -6,11 +6,17 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-description = '03-Abstract-Factory'
+description = '03-Abstract-factory_Refactor'
 
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
     }
 }
 
