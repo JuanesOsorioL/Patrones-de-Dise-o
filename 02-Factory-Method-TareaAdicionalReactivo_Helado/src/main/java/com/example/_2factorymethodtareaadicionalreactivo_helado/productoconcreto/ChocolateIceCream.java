@@ -1,0 +1,17 @@
+package com.example._2factorymethodtareaadicionalreactivo_helado.productoconcreto;
+
+import com.example._2factorymethodtareaadicionalreactivo_helado.modelo.IceCream;
+import com.example._2factorymethodtareaadicionalreactivo_helado.producto.IceCreamProduct;
+import lombok.extern.slf4j.Slf4j;
+import reactor.core.publisher.Mono;
+
+@Slf4j
+public class ChocolateIceCream implements IceCreamProduct {
+    @Override
+    public Mono<IceCream> prepareAsync() {
+        return Mono.fromCallable(() -> {
+            log.info("🍫 Preparando chocolate...");
+            return new IceCream("Chocolate", 5.0);
+        });
+    }
+}
