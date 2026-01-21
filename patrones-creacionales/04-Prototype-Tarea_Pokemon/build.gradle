@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-description = '03-Abstract-Factory-Tarea_Carro'
+description = '04-Prototype-Tarea_Pokemon'
 
 java {
     toolchain {
