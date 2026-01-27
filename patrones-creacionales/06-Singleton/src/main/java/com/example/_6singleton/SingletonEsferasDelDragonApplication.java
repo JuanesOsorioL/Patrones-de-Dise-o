@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class SingletonEsferasDelDragonApplication {
 
     /**
      * ! Singleton:
@@ -20,7 +20,29 @@ public class Application {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(SingletonEsferasDelDragonApplication.class, args);
+
+        DragonBalls goku = DragonBalls.getInstance();
+        goku.collectDragonBall();
+        goku.collectDragonBall();
+        goku.collectDragonBall();
+        goku.summonShenLong();
+
+        DragonBalls vegueta = DragonBalls.getInstance();
+        vegueta.collectDragonBall();
+        vegueta.collectDragonBall();
+        vegueta.collectDragonBall();
+        vegueta.collectDragonBall();
+
+        goku.collectDragonBall();
+        vegueta.collectDragonBall();
+
+        goku.summonShenLong();
+        vegueta.summonShenLong();
+
+
+
+
     }
 
 }
