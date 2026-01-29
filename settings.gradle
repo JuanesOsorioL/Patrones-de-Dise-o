@@ -1,18 +1,1 @@
 rootProject.name = 'patronesDeDiseno'
-
-// ─── PATRONES CREACIONALES ──────────────────────────────
-include 'patrones-creacionales:01-Builder'
-include 'patrones-creacionales:01-Builder-Reactivo'
-include 'patrones-creacionales:01-Builder-Tarea'
-
-include 'patrones-creacionales:02-Factory-Method'
-include 'patrones-creacionales:02-Factory-Method-Tarea_Reporte'
-include 'patrones-creacionales:02-Factory-Method-TareaAdicional_Juego'
-include 'patrones-creacionales:02-Factory-Method-TareaAdicionalReactivo_Helado'
-
-include 'patrones-creacionales:03-Abstract-Factory'
-include 'patrones-creacionales:03-Abstract-Factory-Tarea_Carro'
-include 'patrones-creacionales:03-Abstract-Factory_Refactor'
-
-include 'patrones-creacionales:04-Prototype'
-include 'patrones-creacionales:04-Prototype-TareaAdicional_Pizza'
