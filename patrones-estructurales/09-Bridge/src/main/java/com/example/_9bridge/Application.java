@@ -1,5 +1,6 @@
 package com.example._9bridge;
 
+import com.example._9bridge.habilidades.AxeAttack;
 import com.example._9bridge.habilidades.SwordAttack;
 import com.example._9bridge.tipo.Warrior;
 import org.springframework.boot.SpringApplication;
@@ -24,9 +25,15 @@ public class Application {
         SpringApplication.run(Application.class, args);
 
         SwordAttack habilidadswordAttack = new SwordAttack();
+        AxeAttack habilidadAxeAttack = new AxeAttack();
 
         Warrior warrior = new Warrior(habilidadswordAttack);
         warrior.performAbility();
+
+        warrior.setAbility(habilidadAxeAttack);
+        warrior.performAbility();
+
+
 
     }
 
